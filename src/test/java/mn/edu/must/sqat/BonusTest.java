@@ -65,4 +65,11 @@ class BonusTest {
     void shortStreakMeetsThreshold() {
         assertEquals(5, DataFlowTargets.bonus(new int[] {1, 1}, 1));
     }
+
+    @Test
+    @DisplayName("B-T9 m2Killer: best must come from streak, not present (run after a break)")
+    void bestComesFromStreakNotPresent() {
+        // real best = 4 (<5) -> score 5; mutant best = present = 5 -> score 8
+        assertEquals(5, DataFlowTargets.bonus(new int[] {1, 0, 1, 1, 1, 1}, 5));
+    }
 }
