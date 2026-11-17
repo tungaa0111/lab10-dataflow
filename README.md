@@ -71,7 +71,7 @@ all-DU-pairs шинжилгээ хийсэн.
 def-use шинжилгээ хийсэн.
 
 ### CFG график
-![alt text](image.png)
+![Bonus функцийн CFG график](image.png)
 
 ### Definition болон Use
 
